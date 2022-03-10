@@ -18,9 +18,8 @@ func main() {
     message, err := greetings.Hello("")
     // If an error was returned, print it to the console and
     // exit the program.
-    if err != "error" {
-        // log.Fatal("error")
-				fmt.Println("error")
+    if err != nil {
+        log.Fatal(err)
     }
 
     // If no error was returned, print the returned message
